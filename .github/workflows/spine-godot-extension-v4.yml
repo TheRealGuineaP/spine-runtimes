@@ -1,5 +1,4 @@
 name: Build spine-godot GDExtension (Godot 4.x)
-
 on:
   workflow_call:
     inputs:
@@ -11,6 +10,20 @@ on:
         required: true
         type: string
         default: "Godot version not specified!"
+      dev:
+        required: true
+        type: boolean
+        default: false
+  workflow_dispatch:
+    inputs:
+      godot_tag:
+        required: true
+        type: string
+        default: "4.6.2-stable"
+      godot_version:
+        required: true
+        type: string
+        default: "4.6.2"
       dev:
         required: true
         type: boolean
